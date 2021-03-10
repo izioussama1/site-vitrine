@@ -1,0 +1,334 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vitrine.css">
+    <link rel="stylesheet" href="DatPayment.css">
+    <title>Document</title>
+</head>
+<body>
+  <header class="sticky">
+    <a href=""><img class="logo" src="img/logo.png" alt=""></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#Gallery" onclick="toggleMenu();">Gallery</a></li>
+            <li><a href="#Our Products" onclick="toggleMenu();">Our Products</a></li>
+            <li><a href="#About Us" onclick="toggleMenu();">About Us</a></li>
+            <li><a href="#Contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+</header>
+    
+    <section id="home" class="section">
+        <video loop autoplay muted>
+            <source src="img/trailer.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section class="section01" >
+      <h3>About this item</h3>
+      <div id="div01">
+      <div  class="divedit">
+        <img src="img/product1.png" alt="" style="width: 330PX; margin: 40px;">
+      </div>
+      <div class="divedits">
+        <ul>
+          <li>No Touch Measuring, Just Safe and Hygienic: PT3 Built-in infrared temperature sensor, reads body temperature within 1.18 inches of the center of the forehead without physical contact.
+          </li>
+          <li>Tri-Point Sensors Accuracy: An ultra-sensitive infrared sensor collects more than 100 data points per second while distance and environmental sensors combine to account for other variables; ensuring maximum accuracy every time temperature is taken.
+          </li>
+          <li>Fast, Simple, Clear and Quiet: The intuitive single-button control design thermometer reads the temperature in just 1 second from a clear bright extra-large LED screen, even in total darkness. The quiet vibration alerting ensures there is no buzzing noise and no disturbance.
+          </li>
+          <li>Suitable for Multi-Scenario and All Ages: iHealth PT3 is designed for all ages: ranging from babies and toddlers to the elderly. An ideal choice for hospitals, hotels, school settings, and public establishments.
+          </li>
+          <li>What You Get: 1x PT3 thermometer, 2x AAA batteries, 1x Instruction manual, 1x Quick User Guide, our worry-free 12-month warranty, and friendly California-based customer service.
+          </li>
+        </ul>
+        <div style="text-align: right;"><button id="edit" class="good" onclick="myFunction()"><a href="#buy">Buy Now</a></button></div>
+     </div>
+    </div>
+    </section>
+
+    <section id="secpay">
+    <form action="/" method="POST" id="payment-form" class="datpayment-form" id="buy">            
+      <div class="dpf-input-container" style="margin-right: 20px;">
+          <div class="dpf-input-row">
+              <label class="dpf-input-label">Card number</label>
+              <div class="dpf-input-container with-icon">
+                  <span class="dpf-input-icon"><i aria-hidden="true"><img src="img/card.png" alt="" style="width: 35px;" ></i></span>
+                  <input type="text" class="dpf-input" size="20" data-type="number">
+              </div>
+          </div>
+          <div class="dpf-input-row">
+              <label class="dpf-input-label">Name on Card</label>
+              <div class="dpf-input-container">
+                  <input type="text" size="4" class="dpf-input" data-type="name">
+              </div>
+          </div>
+
+          <div class="dpf-input-row">
+              <div class="dpf-input-column">
+                  <input type="hidden" size="2" data-type="exp_month" placeholder="MM">
+                  <input type="hidden" size="2" data-type="exp_year" placeholder="YY">
+
+                  <label class="dpf-input-label">Expiration date</label>
+                  <div class="dpf-input-container">
+                      <input type="text" class="dpf-input" data-type="expiry">
+                  </div>
+              </div>
+              <div class="dpf-input-column">
+                  <label class="dpf-input-label">CVV</label>
+                  <div class="dpf-input-container">
+                      <input type="text" class="dpf-input" size="4" data-type="cvc">
+                  </div>
+              </div>
+              
+          </div>
+          <div class="dpf-input-row">
+                  <label class="dpf-input-label">Address</label>
+                  <div class="dpf-input-container">
+                      <input type="text" size="4" class="dpf-input" type="name">
+                  </div>
+              </div>
+              <div class="dpf-input-row">
+                  <label class="dpf-input-label">Email address</label>
+                  <div class="dpf-input-container">
+                      <input type="text" size="4" class="dpf-input" type="name">
+                  </div>
+              </div>
+      </div>
+      <div>
+      <div class="dpf-card-placeholder">
+          <div class="dpf-title" >Payment by credit card<div class="accepted-cards-logo"></div>
+          </div>
+      </div>
+      <div style="margin-bottom: 20px;">
+          <label class="dpf-input-label">Payment amount</label>
+          <div class="dpf-input-container">
+              <p type="text" size="4" class="dpf-input" type="name">19.99$</p>
+          </div>
+      </div>
+      <button type="submit" class="dpf-submit" id="myBtn">
+          <span class="btn-active-state">
+              payer now
+          </span>
+  </button>
+      </div>
+      </div>
+  </form>
+</section>
+ 
+      <div id="myModal" class="modal"> 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="green"><h4>Payement has been successfully done</h4></div>
+    <hr>
+    <p id="p">Thank you for your purchase!</p>
+    <p>Your order ID is : 153218910</p>    
+  </div>
+      </div>
+      
+    <section id="Gallery" class="section1">
+      <div><h3>Gallery</h3></div>
+      <div class="center">
+<div class="img-slider">
+        <div class="slide active">
+          <img src="img/1.jpg" alt="">
+          <div class="info">
+            <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/2.jpg" alt="">
+          <div class="info">
+            <h2>Slide 02</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/3.jpg" alt="">
+          <div class="info">
+            <h2>Slide 03</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/4.jpg" alt="">
+          <div class="info">
+            <h2>Slide 04</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/5.jpg" alt="">
+          <div class="info">
+            <h2>Slide 05</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section id="Our Products" class="section2">
+        <h3>Our Products</h3>
+        <div id="item">
+            <div class="div">
+              <img class="img1" src="img/product2.jpg" alt="">  
+            </div>
+            <div class="div1">
+                 <p class="text">iHealth Digital Thermometer PT1 gives reliable oral temperature readings in 30s by highly accurate dual-sensors & the crystal clear XL backlit digit that display lets you read your temperature results easily day or night. 
+                </p>
+            </div>
+        </div>
+        <div id="item1">
+          <div class="div1">
+               <p class="text">JUMPER Ear Forehead Thermometer Infrared Digital Thermometer with Accurate Reading High Temperature Alarm Memory Recalls for Baby Kid and Adults, Blue. 
+              </p>
+          </div>
+          <div class="div">
+            <img class="img1" src="img/product3.jpg" alt="">  
+          </div>
+      </div>
+
+    </section>
+
+    <section class="section4" id="About Us">
+      <h3>About Us</h3>
+      <div class="sec4">
+      <h5>TAKE CHARGE OF YOUR HEALTH: ABOUT IHEALTH</h5>
+      <p>iHealth is dedicated to helping people lead healthier lives.</p>
+      <h5>OUR GOAL</h5>
+      <p>Our goal is to make it as easy as possible for individuals of all ages to take a more active role in managing their health.</p>
+      <h5>OUR APPROACH</h5>
+      <p>We do this by designing and manufacturing innovative, consumer-friendly, mobile personal healthcare products that connect to the cloud.</p>
+      <p>iHealth products are easy to use, making it simple for consumers to accurately measure, track, and share a full range of health vitals.</p>
+      <p>By automatically connecting the data through the cloud, consumers are able to see a more comprehensive view of their vitals and easily share information with healthcare professionals or loved ones.</p>
+    </div>
+    </section>
+ 
+    <section id="Contact" class="section3">
+      <h3>Contact</h3>
+      <div class="sec3div">
+      <div class="container1">
+        <form id="form1">
+          <div >
+            <div class="col-25">
+              <label >Full Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="name" placeholder="Your name.." >
+            </div>
+          </div>
+          <div >
+            <div class="col-25">
+              <label >Email</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="email" placeholder="jack@example.com" >
+            </div>
+          </div>
+          <div >
+            <div class="col-25">
+              <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="Cntr"  placeholder="Country.." >
+            </div>
+          </div>
+          <div >
+            <div class="col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" placeholder="Write something.." style="height:200px" ></textarea>
+            </div> 
+            
+          
+          </div>
+        </form>
+       <button id="button" style="margin-top: 20px;">Sumbit</button>
+      </div>
+      <div style="width: 45%; vertical-align: middle;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.181724259937!2d-5.823345314748061!3d35.74633793400683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b87c216892bc7%3A0x48bdf85995e9c186!2sSolicode%20Tanger!5e0!3m2!1sar!2sma!4v1615319861537!5m2!1sar!2sma" class="map"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    </section>
+
+    <div class="copyright">
+      <p style="padding: 5px;">Copyright &copy 2021. All Reserved. powered by IziMed</p>
+    </div>
+
+<script src="js.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript" src="DatPayment.js"></script> 
+
+        <script type="text/javascript">
+            var payment_form = new DatPayment({
+                form_selector: '#payment-form',
+                card_container_selector: '.dpf-card-placeholder',
+
+                number_selector: '.dpf-input[data-type="number"]',
+                date_selector: '.dpf-input[data-type="expiry"]',
+                cvc_selector: '.dpf-input[data-type="cvc"]',
+                name_selector: '.dpf-input[data-type="name"]',
+
+                // submit_button_selector: '.dpf-submit',
+
+                placeholders: {
+                    number: '•••• •••• •••• ••••',
+                    expiry: '••/••',
+                    cvc: '•••',
+                    name: 'Full Name'
+                },
+
+                validators: {
+                    number: function(number){
+                        return Stripe.card.validateCardNumber(number);
+                    },
+                    expiry: function(expiry){
+                        var expiry = expiry.split(' / ');
+                        return Stripe.card.validateExpiry(expiry[0]||0,expiry[1]||0);
+                    },
+                    cvc: function(cvc){
+                        return Stripe.card.validateCVC(cvc);
+                    },
+                    name: function(value){
+                        return value.length > 0;
+                    }
+                }
+            });
+
+            var demo_log_div = document.getElementById("demo-log");
+
+            payment_form.form.addEventListener('payment_form:submit',function(e){
+                var form_data = e.detail;
+                payment_form.unlockForm();
+                demo_log_div.innerHTML += "<br>"+JSON.stringify(form_data);
+            });
+
+            payment_form.form.addEventListener('payment_form:field_validation_success',function(e){
+                var input = e.detail;
+
+                demo_log_div.innerHTML += "<br>field_validation_success:"+input.getAttribute("data-type");
+
+            });
+
+            payment_form.form.addEventListener('payment_form:field_validation_failed',function(e){
+                var input = e.detail;
+
+                demo_log_div.innerHTML += "<br>field_validation_failed:"+input.getAttribute("data-type");
+            });
+        </script>
+</body>
+</html
